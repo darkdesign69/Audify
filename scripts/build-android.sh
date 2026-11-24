@@ -19,6 +19,8 @@ rm -rf x && mkdir x && unzip -q libmpv-release.aar -d x
 rm -rf "$ROOT/libmpv-link" && mkdir -p "$ROOT/libmpv-link"
 cp x/jni/arm64-v8a/*.so "$ROOT/libmpv-link/"
 cd "$ROOT"
+echo "libmpv-link contents:"; ls -la libmpv-link
+[ -f libmpv-link/libmpv.so ] || { echo "ERROR: libmpv.so missing from the AAR (jni/arm64-v8a)"; find .libmpv/x -name '*.so' | head -30; exit 1; }
 echo "::endgroup::"
 
 # The linker needs libmpv.so (and the FFmpeg libs it depends on) to resolve symbols.
@@ -38,7 +40,13 @@ python3 android-overlay/apply.py
 echo "::endgroup::"
 
 echo "::group::tauri android build"
-"$TAURI" android build --apk --target aarch64 --ci
+if ! "$TAURI" android build --apk --target aarch64 --ci 2>&1 | tee /tmp/tauri-build.log; then
+  echo "::endgroup::"
+  echo "::group::ROOT CAUSE (short)"
+  grep -nE 'error(\[E[0-9]+\])?:|undefined (symbol|reference)|unable to find|cannot find|ld\.lld|What went wrong|Execution failed' /tmp/tauri-build.log | grep -v 'Io(Env' | cut -c1-250 | head -40
+  echo "::endgroup::"
+  exit 1
+fi
 echo "::endgroup::"
 
 echo "::group::sign"
