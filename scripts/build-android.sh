@@ -40,10 +40,24 @@ python3 android-overlay/apply.py
 echo "::endgroup::"
 
 echo "::group::tauri android build"
+# Gradle later runs `node <cli> android android-studio-script`, and the Tauri CLI reports its own
+# path as just "tauri" (resolved inside src-tauri/) when started from node_modules/.bin.
+# Make that path a real file pointing at the CLI so Gradle can find it.
+CLI_DIR="$(readlink -f "$ROOT/ui/node_modules/@tauri-apps/cli")"
+CLI_JS="$CLI_DIR/tauri.js"
+[ -f "$CLI_JS" ] || CLI_JS="$(readlink -f "$TAURI")"
+echo "Tauri CLI entry: $CLI_JS"
+ln -sf "$CLI_JS" "$ROOT/src-tauri/tauri"
+ls -l "$ROOT/src-tauri/tauri"
 if ! "$TAURI" android build --apk --target aarch64 --ci 2>&1 | tee /tmp/tauri-build.log; then
   echo "::endgroup::"
   echo "::group::ROOT CAUSE (short)"
-  grep -nE 'error(\[E[0-9]+\])?:|undefined (symbol|reference)|unable to find|cannot find|ld\.lld|What went wrong|Execution failed' /tmp/tauri-build.log | grep -v 'Io(Env' | cut -c1-250 | head -40
+  # cargo prints colour codes, which broke the earlier search: strip them first
+  sed -E 's/\x1b\[[0-9;]*[A-Za-z]//g' /tmp/tauri-build.log | grep -v 'Io(Env' | cut -c1-220 > /tmp/clean.log
+  echo "--- first rust/linker errors ---"
+  grep -n -m4 -B2 -A18 -E '^ *(error(\[E[0-9]+\])?:|.*ld\.lld: error|.*undefined (symbol|reference)|.*unable to find|.*cannot find)' /tmp/clean.log | head -90
+  echo "--- last 40 lines before the Gradle summary ---"
+  grep -n -B40 -m1 'FAILURE: Build failed' /tmp/clean.log | head -45
   echo "::endgroup::"
   exit 1
 fi

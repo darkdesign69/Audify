@@ -1,0 +1,1 @@
+patch5: updates scripts/build-android.sh (this extra file only stops the workflow from treating scripts/ as a wrapper folder)
