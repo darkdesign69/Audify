@@ -1,5 +1,23 @@
 fn main() {
     // tauri-build watches tauri.conf.json but not the icons it embeds.
     println!("cargo:rerun-if-changed=icons");
+
+    // Android: the linker needs libmpv.so (unpacked by scripts/build-android.sh into
+    // ../libmpv-link) to resolve libmpv2-sys's `-lmpv`. Done here, not through RUSTFLAGS,
+    // because the build runs under Gradle and an environment variable did not reach cargo.
+    println!("cargo:rerun-if-changed=../libmpv-link");
+    if std::env::var("CARGO_CFG_TARGET_OS").as_deref() == Ok("android") {
+        let dir = std::path::Path::new(&std::env::var("CARGO_MANIFEST_DIR").unwrap())
+            .join("../libmpv-link");
+        match dir.canonicalize() {
+            Ok(dir) => {
+                println!("cargo:rustc-link-search=native={}", dir.display());
+                println!("cargo:rustc-link-arg=-Wl,-rpath-link,{}", dir.display());
+                println!("cargo:rustc-link-arg=-Wl,--allow-shlib-undefined");
+            }
+            Err(e) => println!("cargo:warning=libmpv-link not found: {e}"),
+        }
+    }
+
     tauri_build::build()
 }
