@@ -40,6 +40,15 @@ python3 android-overlay/apply.py
 echo "::endgroup::"
 
 echo "::group::tauri android build"
+# Gradle later runs `node <cli> android android-studio-script`, and the Tauri CLI reports its own
+# path as just "tauri" (resolved inside src-tauri/) when started from node_modules/.bin.
+# Make that path a real file pointing at the CLI so Gradle can find it.
+CLI_DIR="$(readlink -f "$ROOT/ui/node_modules/@tauri-apps/cli")"
+CLI_JS="$CLI_DIR/tauri.js"
+[ -f "$CLI_JS" ] || CLI_JS="$(readlink -f "$TAURI")"
+echo "Tauri CLI entry: $CLI_JS"
+ln -sf "$CLI_JS" "$ROOT/src-tauri/tauri"
+ls -l "$ROOT/src-tauri/tauri"
 if ! "$TAURI" android build --apk --target aarch64 --ci 2>&1 | tee /tmp/tauri-build.log; then
   echo "::endgroup::"
   echo "::group::ROOT CAUSE (short)"
