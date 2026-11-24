@@ -1,0 +1,24 @@
+{
+  "_doc": "Spotless Browse tile colours, the one list both apps use. Mac: ui/src/lib/discover/data.ts imports this file. iPhone: SearchView.swift mirrors the same hexes. Our own set, not Spotify's: saturated, distinct, white text at least 4.5:1 on every one (crates/core/src/browse_tiles.rs tests it). `fixed` are the five fixed tiles; `palette` colours the genre and mood tiles in order, cycling.",
+  "fixed": {
+    "charts": "#6a2fd8",
+    "podcasts": "#0b7a75",
+    "audiobooks": "#c2410c",
+    "made_for_you": "#1f4fa8",
+    "new_releases": "#d6246e"
+  },
+  "palette": [
+    "#be123c",
+    "#15803d",
+    "#9d2bb0",
+    "#0e6ba8",
+    "#a16207",
+    "#3f7d20",
+    "#b0279f",
+    "#d6246e",
+    "#0b7a75",
+    "#6a2fd8",
+    "#1f4fa8",
+    "#c2410c"
+  ]
+}

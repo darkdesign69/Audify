@@ -1,0 +1,37 @@
+[package]
+name = "limusic-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Spotless for Android: free, ad-free music player (fork of Limusic)"
+rust-version = "1.80"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["net", "io-util", "sync"] }
+tracing = { workspace = true }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tauri = { version = "2", features = ["protocol-asset", "image-png"] }
+tauri-plugin-dialog = "2.7.2"
+tauri-plugin-clipboard-manager = "2.3.2"
+tauri-plugin-opener = "2"
+regex = "1"
+urlencoding = "2"
+
+# Everything the app does that isn't a window: transport, player, database, queue, smart,
+# podcasts, import, lyrics (crates/core, shared with the desktop and iPhone apps).
+# Android build: no BotGuard/V8 and no Japanese romanization dictionary (both desktop-only,
+# heavy); the cipher runs in QuickJS inside the process instead of a hidden webview.
+encore-core = { path = "../crates/core", default-features = false, features = ["quickjs"] }
+innertube = { path = "../crates/innertube" }
+player = { path = "../crates/player" }
+futures-util = { workspace = true }
+libc = "0.2"

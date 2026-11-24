@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>The Fixture Show</title>
+    <link>https://example.com/show</link>
+    <description><![CDATA[<p>A show about <b>fixtures</b> &amp; tests.</p>]]></description>
+    <language>en</language>
+    <itunes:author>Fixture Media</itunes:author>
+    <itunes:image href="https://example.com/art.jpg"/>
+    <item>
+      <title>Episode 3: Video</title>
+      <guid isPermaLink="false">ep-3</guid>
+      <pubDate>Tue, 10 Nov 2026 09:00:00 +0000</pubDate>
+      <enclosure url="https://cdn.example.com/ep3.mp4" length="1000" type="video/mp4"/>
+      <itunes:duration>3725</itunes:duration>
+      <description>Plain text notes.
+00:30 Intro
+https://example.com/link</description>
+    </item>
+    <item>
+      <title>Episode 2: Notes</title>
+      <guid>ep-2</guid>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 GMT</pubDate>
+      <enclosure url="https://dts.podtrac.com/redirect.mp3/cdn.example.com/ep2.mp3?x=1&amp;y=2" length="2000" type="audio/mpeg"/>
+      <itunes:duration>01:02:03</itunes:duration>
+      <itunes:image href="https://example.com/ep2.jpg"/>
+      <podcast:chapters type="application/json+chapters" url="https://example.com/ep2/chapters.json?a=1&amp;b=2"/>
+      <description>Short summary.</description>
+      <content:encoded><![CDATA[<p>Full notes <script>alert('x')</script><a href="https://example.com/x">link</a></p><p>(12:05) Chapter</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Episode 1</title>
+      <guid>ep-1</guid>
+      <pubDate>Sun, 01 Nov 2026 09:00:00 GMT</pubDate>
+      <enclosure url="https://cdn.example.com/ep1.mp3" length="3000" type="audio/mpeg"/>
+      <itunes:duration>45:10</itunes:duration>
+    </item>
+    <item>
+      <title>Text-only post (no enclosure)</title>
+      <guid>post-1</guid>
+      <pubDate>Sat, 31 Oct 2026 09:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

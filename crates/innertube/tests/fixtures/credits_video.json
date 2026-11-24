@@ -1,0 +1,95 @@
+{
+ "trackingParams": "CAAQhGciEwiNroS88oqYAxUmVkgAHUGZLLTKAQQbjAvF",
+ "onResponseReceivedActions": [
+  {
+   "clickTrackingParams": "CAAQhGciEwiNroS88oqYAxUmVkgAHUGZLLTKAQQbjAvF",
+   "openPopupAction": {
+    "popup": {
+     "dismissableDialogRenderer": {
+      "trackingParams": "CAEQzS8iEwiNroS88oqYAxUmVkgAHUGZLLQ=",
+      "title": "Song credits",
+      "metadata": {
+       "musicMultiRowListItemRenderer": {
+        "trackingParams": "CAIQ3-AIIhMIja6EvPKKmAMVJlZIAB1BmSy0",
+        "thumbnail": {
+         "musicThumbnailRenderer": {
+          "thumbnail": {
+           "thumbnails": [
+            {
+             "url": "https://i.ytimg.com/vi/fJ9rUzIMcZQ/hqdefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCggAEOADGC0guwJIWg&rs=AMzJL3lsQhmUoD8y1EjuRw739pQAHDsUjw",
+             "width": 400,
+             "height": 225
+            },
+            {
+             "url": "https://i.ytimg.com/vi/fJ9rUzIMcZQ/hqdefault.jpg?sqp=-oaymwEWCOADEI4CIAQqCggAEOADGC0guwJIWg&rs=AMzJL3lNhrufpvOldx4x5cwA_KHNquseEg",
+             "width": 480,
+             "height": 270
+            }
+           ]
+          },
+          "thumbnailCrop": "MUSIC_THUMBNAIL_CROP_UNSPECIFIED",
+          "thumbnailScale": "MUSIC_THUMBNAIL_SCALE_ASPECT_FIT",
+          "trackingParams": "CAMQhL8CIhMIja6EvPKKmAMVJlZIAB1BmSy0"
+         }
+        },
+        "subtitle": {
+         "runs": [
+          {
+           "text": "Queen",
+           "navigationEndpoint": {
+            "clickTrackingParams": "CAIQ3-AIIhMIja6EvPKKmAMVJlZIAB1BmSy0ygEEG4wLxQ==",
+            "browseEndpoint": {
+             "browseId": "UCEPMVbUzImPl4p8k4LkGevA",
+             "browseEndpointContextSupportedConfigs": {
+              "browseEndpointContextMusicConfig": {
+               "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+              }
+             }
+            }
+           }
+          }
+         ]
+        },
+        "title": {
+         "runs": [
+          {
+           "text": "Bohemian Rhapsody",
+           "navigationEndpoint": {
+            "clickTrackingParams": "CAIQ3-AIIhMIja6EvPKKmAMVJlZIAB1BmSy0ygEEG4wLxQ==",
+            "watchEndpoint": {
+             "videoId": "fJ9rUzIMcZQ",
+             "watchEndpointMusicSupportedConfigs": {
+              "watchEndpointMusicConfig": {
+               "musicVideoType": "MUSIC_VIDEO_TYPE_OMV"
+              }
+             }
+            }
+           }
+          }
+         ]
+        },
+        "secondTitle": {
+         "runs": [
+          {
+           "text": "Video"
+          }
+         ]
+        },
+        "description": {
+         "runs": [
+          {
+           "text": "Lyrics not available"
+          }
+         ]
+        },
+        "displayStyle": "MUSIC_MULTI_ROW_LIST_ITEM_DISPLAY_STYLE_SIMPLE_EXPANDED"
+       }
+      },
+      "displayStyle": "DISMISSABLE_DIALOG_DISPLAY_STYLE_TRACK_CREDITS"
+     }
+    },
+    "popupType": "DIALOG"
+   }
+  }
+ ]
+}

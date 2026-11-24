@@ -1,0 +1,836 @@
+@import 'tailwindcss';
+@import "tw-animate-css";
+@import "shadcn-svelte/tailwind.css";
+@import "@fontsource-variable/figtree";
+
+/* ============================================================================================
+   Spotless design system: one Spotify-dark token set (docs/spotify-spec/theme.css + tokens.json).
+   There are no themes and no light mode. `<html class="dark">` is fixed in app.html.
+
+   Two vocabularies resolve to the same values:
+   - the spec's neutral names (`bg-bg-base`, `text-text-subdued`, `bg-accent`, `shadow-menu`, …),
+     which new code and the kit (`$lib/kit`) use;
+   - the legacy shadcn names (`bg-background`, `text-muted-foreground`, `bg-primary`, …), which the
+     kept Limusic leaf components and `components/ui/*` still use. They are mapped onto the same
+     Spotify values below, so both look right while pages are rebuilt.
+   ============================================================================================ */
+
+@custom-variant dark (&:is(.dark *));
+
+/* Desktop app: hover always applies (Tailwind 4 gates `hover:` behind @media (hover: hover)). */
+@custom-variant hover (&:hover);
+
+:root {
+	color-scheme: dark;
+	/* shadcn tokens → Spotify values */
+	--background: #121212;
+	--foreground: #ffffff;
+	--card: #1f1f1f;
+	--card-foreground: #ffffff;
+	--popover: #282828;
+	--popover-foreground: #ffffff;
+	--primary: var(--color-accent);
+	--primary-foreground: #000000;
+	--secondary: #2a2a2a;
+	--secondary-foreground: #ffffff;
+	--muted: #282828;
+	--muted-foreground: #b3b3b3;
+	--accent-foreground: #000000;
+	--destructive: #f3727f;
+	--border: rgb(255 255 255 / 0.1);
+	--input: rgb(255 255 255 / 0.1);
+	--ring: #ffffff;
+	--chart-1: var(--color-accent);
+	--chart-2: #539df5;
+	--chart-3: #ffa42b;
+	--chart-4: #f3727f;
+	--chart-5: #b3b3b3;
+	--sidebar: #121212;
+	--sidebar-foreground: #ffffff;
+	--sidebar-primary: var(--color-accent);
+	--sidebar-primary-foreground: #000000;
+	--sidebar-accent: rgb(255 255 255 / 0.1);
+	--sidebar-accent-foreground: #ffffff;
+	--sidebar-border: rgb(255 255 255 / 0.1);
+	--sidebar-ring: #ffffff;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	/* Runtime vars the shell writes */
+	--content-spacing: 24px;
+	--header-tint: rgb(83 83 83);
+}
+
+@theme {
+	/* ---------- Colour: surfaces ---------- */
+	--color-bg-app: #000000;
+	--color-bg-base: #121212;
+	--color-bg-highlight: #1f1f1f;
+	--color-bg-press: #000000;
+	--color-bg-elevated: #1f1f1f;
+	--color-bg-elevated-highlight: #2a2a2a;
+	--color-bg-elevated-press: #191919;
+	--color-bg-menu: #282828;
+	--color-bg-tinted: rgb(255 255 255 / 0.10);
+	--color-bg-tinted-highlight: rgb(255 255 255 / 0.14);
+	--color-bg-tinted-press: rgb(255 255 255 / 0.21);
+	--color-bg-selected: rgb(255 255 255 / 0.30);
+	--color-scrim: rgb(0 0 0 / 0.70);
+	--color-header-shade: rgb(0 0 0 / 0.60);
+
+	/* ---------- Colour: text ---------- */
+	--color-text-base: #ffffff;
+	--color-text-subdued: #b3b3b3;
+	--color-text-meta: #cdcdcd;
+	--color-text-muted: rgb(255 255 255 / 0.70);
+	--color-text-menu: rgb(255 255 255 / 0.90);
+	--color-text-dim: #7c7c7c;
+	--color-text-negative: #f3727f;
+	--color-text-warning: #ffa42b;
+	--color-text-announcement: #539df5;
+	/* Semantic "went up" (chart trends), deliberately NOT the brand: a pink up-arrow next to the red
+	   down-arrow would read as the same signal. Emerald, well clear of Spotify's green. */
+	--color-text-positive: #34d399;
+	--color-on-accent: #000000;
+
+	/* ---------- Colour: accent & status ---------- */
+	/* Spotless brand pink (scripts/brand/final.py PINK) — the ONE accent; everything else references
+	   these. Hover = 12% toward white, press = 12% toward black. Black text sits on it (≈5.9:1;
+	   white would be ≈3.6:1). As text on #121212 the base is ≈5.3:1, but on raised surfaces
+	   (#1f1f1f/#282828) it drops toward 4:1, so words in the accent use --color-accent-text. */
+	--color-accent: #ff2d7a;
+	--color-accent-hover: #ff468a;
+	--color-accent-press: #e0286b;
+	--color-accent-text: #ff4f8f;
+	--color-accent-tile: #5a0e30;
+	--color-negative: #ed2c3f;
+	--color-warning: #ffa42b;
+	--color-announcement: #1278f2;
+	--color-decorative-subdued: #292929;
+
+	/* ---------- Colour: borders & controls ---------- */
+	--color-border-subtle: rgb(255 255 255 / 0.10);
+	--color-border-control: #7c7c7c;
+	--color-border-focus: #ffffff;
+	--color-progress-track: rgb(255 255 255 / 0.30);
+	--color-progress-fill: #ffffff;
+	--color-progress-preview: rgb(255 255 255 / 0.70);
+	--color-switch-off: #535353;
+	--color-switch-on: var(--color-accent);
+	--color-scroll-thumb: rgb(255 255 255 / 0.30);
+	--color-scroll-thumb-hover: rgb(255 255 255 / 0.50);
+	--color-scroll-thumb-active: rgb(255 255 255 / 0.70);
+
+	/* ---------- Typography ---------- */
+	--font-sans: "Figtree Variable", "Figtree", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+	--font-title: "Figtree Variable", "Figtree", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+	--font-heading: "Figtree Variable", "Figtree", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+
+	--text-2xs: 0.625rem;   /* 10 */
+	--text-xs: 0.75rem;     /* 12 */
+	--text-sm: 0.875rem;    /* 14 */
+	--text-base: 1rem;      /* 16 */
+	--text-lg: 1.25rem;     /* 20 */
+	--text-xl: 1.5rem;      /* 24 */
+	--text-2xl: 2rem;       /* 32 */
+	--text-3xl: 3rem;       /* 48 */
+	--text-4xl: 4.5rem;     /* 72 */
+	--text-5xl: 6rem;       /* 96 */
+
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-weight-extrabold: 800;
+
+	/* ---------- Radius ---------- */
+	--radius-xs: 2px;
+	--radius-sm: 4px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+	--radius-xl: 16px;
+	--radius-2xl: 16px;
+	--radius-full: 9999px;
+
+	/* ---------- Shadows ---------- */
+	--shadow-menu: 0 16px 24px rgb(0 0 0 / 0.3), 0 6px 8px rgb(0 0 0 / 0.2);
+	--shadow-card-image: 0 8px 24px rgb(0 0 0 / 0.5);
+	--shadow-header-cover: 0 4px 60px rgb(0 0 0 / 0.5);
+	--shadow-play: 0 8px 8px rgb(0 0 0 / 0.3);
+	--shadow-thumb: 0 2px 4px rgb(0 0 0 / 0.5);
+	--shadow-modal: 0 4px 4px rgb(0 0 0 / 0.3);
+	--shadow-overlay: 0 4px 12px rgb(0 0 0 / 0.3);
+
+	/* ---------- Spacing ---------- */
+	--spacing: 4px;
+	--spacing-panel-gap: 8px;
+	--spacing-home-gutter: 40px;
+
+	/* ---------- Fixed sizes ---------- */
+	--size-topbar: 64px;
+	--size-playerbar: 72px;
+	--size-sidebar-collapsed: 72px;
+	--size-sidebar-min: 280px;
+	--size-sidebar-max: 420px;
+	--size-rightpanel-min: 280px;
+	--size-rightpanel-max: 420px;
+	--size-track-row: 56px;
+	--size-library-row: 64px;
+	--size-library-row-compact: 32px;
+	--size-menu-item: 40px;
+	--size-chip: 32px;
+	--size-control-sm: 32px;
+	--size-control-md: 48px;
+	--size-control-lg: 56px;
+
+	/* ---------- Motion ---------- */
+	--ease-productive: cubic-bezier(.3, 0, 0, 1);
+	--ease-decelerate: cubic-bezier(0, 0, .2, 1);
+	--ease-accelerate: cubic-bezier(.8, 0, 1, 1);
+	--duration-50: 50ms;
+	--duration-100: 100ms;
+	--duration-150: 150ms;
+	--duration-200: 200ms;
+	--duration-250: 250ms;
+	--duration-300: 300ms;
+	--duration-header: 1s;
+
+	/* ---------- Z layers ---------- */
+	--z-topbar: 1;
+	--z-sidebar: 4;
+	--z-above-main: 5;
+	--z-playerbar: 6;
+	--z-above-all: 7;
+	--z-dialog: 1050;
+	--z-popover: 1060;
+
+	--animate-eq-1: eq 1.1s ease-in-out infinite;
+}
+
+/* Legacy shadcn names → the values above. */
+@theme inline {
+	--color-sidebar-ring: var(--sidebar-ring);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar: var(--sidebar);
+	--color-chart-5: var(--chart-5);
+	--color-chart-4: var(--chart-4);
+	--color-chart-3: var(--chart-3);
+	--color-chart-2: var(--chart-2);
+	--color-chart-1: var(--chart-1);
+	--color-ring: var(--ring);
+	--color-input: var(--input);
+	--color-border: var(--border);
+	--color-destructive: var(--destructive);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-muted: var(--muted);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-secondary: var(--secondary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary: var(--primary);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-popover: var(--popover);
+	--color-card-foreground: var(--card-foreground);
+	--color-card: var(--card);
+	--color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--font-mono: var(--font-mono);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	html,
+	body {
+		background: var(--color-bg-app);
+		color: var(--color-text-base);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		overscroll-behavior: none;
+	}
+	::selection {
+		background: var(--color-accent);
+		color: #000;
+	}
+	button:not(:disabled),
+	[role='button'] {
+		cursor: pointer;
+	}
+	/* Spotify uses the default cursor on links inside the app too, except text links. */
+	img {
+		-webkit-user-drag: none;
+	}
+	:focus-visible {
+		outline: 2px solid #fff;
+		outline-offset: 1px;
+	}
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
+}
+
+@layer components {
+	/* a11y: skip link (Spotify's: white, black bold text, top-left, only visible on focus). */
+	.skip-link {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		padding: 20px 24px;
+		border-radius: 0 0 8px 0;
+		background: #fff;
+		color: #000;
+		font-size: 16px;
+		font-weight: 700;
+		transform: translateY(-100%);
+	}
+	.skip-link:focus-visible,
+	.skip-link:focus {
+		transform: none;
+		outline: none;
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+	/* Visually hidden, still read (live regions, landmark headings). */
+	.visually-hidden {
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		border: 0;
+	}
+	/* Overlay-style scrollbar: 8px, invisible until the scroller is hovered (spec: interactions-motion). */
+	.scroll-area {
+		scrollbar-width: thin;
+		scrollbar-color: transparent transparent;
+	}
+	.scroll-area:hover {
+		scrollbar-color: var(--color-scroll-thumb) transparent;
+	}
+
+	/* Big accent play button (entity 56 / card 48 / sticky 48). The kit's <PlayButton> uses it. */
+	.btn-play {
+		display: grid;
+		place-items: center;
+		border-radius: 9999px;
+		background: var(--color-accent);
+		color: #000;
+		transition:
+			background-color 50ms var(--ease-productive),
+			transform 50ms var(--ease-productive);
+	}
+	.btn-play:hover {
+		background: var(--color-accent-hover);
+		transform: scale(1.04);
+	}
+	.btn-play:active {
+		background: var(--color-accent-press);
+		transform: scale(1);
+	}
+
+	/* Secondary outline pill (Follow / Add / Edit). */
+	.btn-outline {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		height: 32px;
+		padding: 4px 16px;
+		border-radius: 9999px;
+		border: 1px solid var(--color-border-control);
+		color: #fff;
+		font-size: 14px;
+		font-weight: 700;
+		transition:
+			transform 50ms var(--ease-productive),
+			border-color 50ms;
+	}
+	.btn-outline:hover {
+		border-color: #fff;
+		transform: scale(1.04);
+	}
+
+	/* Primary white pill (modal Save, empty-state actions). */
+	.btn-white {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		height: 48px;
+		padding: 8px 32px;
+		border-radius: 9999px;
+		background: #fff;
+		color: #000;
+		font-size: 16px;
+		font-weight: 700;
+		transition: transform 50ms var(--ease-productive);
+	}
+	.btn-white:hover {
+		transform: scale(1.04);
+	}
+	.btn-white:active {
+		transform: scale(1);
+		opacity: 0.7;
+	}
+	.btn-white.sm {
+		height: 32px;
+		padding: 4px 16px;
+		font-size: 14px;
+	}
+
+	/* Filter chip. */
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		flex-shrink: 0;
+		height: 32px;
+		padding: 4px 12px;
+		border-radius: 9999px;
+		background: var(--color-bg-tinted);
+		color: #fff;
+		font-size: 14px;
+		line-height: 14px;
+		white-space: nowrap;
+		transition: background-color 100ms var(--ease-productive);
+	}
+	.chip:hover {
+		background: var(--color-bg-tinted-highlight);
+	}
+	.chip[aria-checked='true'],
+	.chip[aria-pressed='true'] {
+		background: #fff;
+		color: #000;
+	}
+	.chip[aria-checked='true']:hover,
+	.chip[aria-pressed='true']:hover {
+		background: #f0f0f0;
+	}
+
+	/* Text link that underlines on hover (titles, artists). `.link-sub` also turns white. */
+	.link {
+		cursor: pointer;
+	}
+	.link:hover {
+		text-decoration: underline;
+	}
+	.link-sub:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	/* kbd chip (shortcuts sheet). */
+	.kbd {
+		display: inline-grid;
+		place-items: center;
+		min-width: 26px;
+		height: 28px;
+		padding: 2px 6px;
+		border-radius: 4px;
+		font-size: 16px;
+		line-height: 24px;
+		color: #fff;
+		box-shadow:
+			0 1px 0 #121212,
+			inset 0 0 0 1px #7c7c7c;
+	}
+
+	/* Faint noise used over artwork-tinted headers (spec: "faint noise texture"). */
+	.noise {
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+		opacity: 0.05;
+		pointer-events: none;
+	}
+}
+
+/* Overlay scrollbars everywhere: 8px thumb, transparent until the scroller is hovered. WebKit
+   needs the ::-webkit-scrollbar rules so the bars live in the page's stacking order. */
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	background-clip: padding-box;
+}
+*:hover::-webkit-scrollbar-thumb {
+	background-color: var(--color-scroll-thumb);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-scroll-thumb-hover) !important;
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: var(--color-scroll-thumb-active) !important;
+}
+/* Shelves and chip rows scroll sideways without a visible bar. */
+.no-scrollbar {
+	scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+.rail::-webkit-scrollbar {
+	height: 4px;
+}
+
+/* The playing track's animated equaliser (4 bars, ~1s loop, staggered). */
+@keyframes eq {
+	0%, 100% { transform: scaleY(0.25); }
+	25% { transform: scaleY(1); }
+	50% { transform: scaleY(0.5); }
+	75% { transform: scaleY(0.85); }
+}
+
+/* Blurred/promoted artwork wash (kept from Limusic for the now-playing surfaces). */
+.art-wash {
+	will-change: transform;
+}
+
+/* --- Motion & interaction polish --- */
+
+/* Loaded page content fades in over the skeleton/route swap it replaces. Opacity-only —
+   cheap to composite on WebKitGTK. */
+@keyframes content-in {
+	from { opacity: 0; }
+}
+.content-in { animation: content-in 150ms ease-out; }
+
+/* The card grid behind Library, Local music, search results and "See all". Same reasoning as
+   Shelf.svelte: WebKit keeps every card in style, layout and paint, and because it rasterizes in
+   tiles, one card's hover repaint re-rasterizes the images around it — so hovering gets slower the
+   more cards there are, and a full library is hundreds. Skipping off-screen cards caps that at a
+   screenful, and their thumbnails stop being fetched until you scroll near them.
+   12.75rem is a card exactly (8px padding + 144px cover + 8px gap + title + subtitle + 8px); the
+   `auto` keyword swaps in the measured size after a card's first paint, so the scrollbar stays put.
+   Paint containment clips at the card's own box, which the group-hover shadow stays inside: it
+   reaches ~27px below the cover and there are 52px of title, subtitle and padding under it. */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 10rem);
+	/* Pinned, not auto. An auto row is as tall as its tallest card, and a skipped card reports the
+	   contain-intrinsic-size below while a rendered one reports its real height — which is 1rem
+	   shorter when the item has no subtitle. So any row straddling the skip boundary changed height
+	   as you scrolled, and since a hover is what forces the layout pass that reconciles it, hovering
+	   near that boundary reflowed the grid, moved the scroll position, and changed which cards were
+	   skipped. Same number for both and the loop can't start. */
+	grid-auto-rows: 12.75rem;
+	gap: 1rem;
+}
+.card-grid > * {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 12.75rem;
+}
+
+/* --- Moods & Genres tiles (search page) ---
+   Three sections, one family: the name top left, YouTube's colour for the tile (--mood, set inline)
+   mixed into --card so the name stays --foreground on every theme whatever colour YouTube picked,
+   and a cover from the tile's category fading into the card on the right. What changes per section
+   is how that cover sits: For you gets a panel and the app's mark, Moods & moments a record that
+   spins under the pointer, Genres a tilted sleeve with its colour glowing up from behind it.
+   Every hover effect is a transform or an opacity, and only on the one tile under the pointer. */
+.mood-grid {
+	display: grid;
+	gap: 0.75rem;
+}
+.mood-grid.for-you {
+	grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+.mood-grid.moods {
+	grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
+}
+.mood-grid.genres {
+	grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+}
+.mood {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 1rem 1.125rem;
+	border: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
+	border-radius: calc(var(--radius) * 2 + 0.375rem);
+	background: color-mix(in oklab, var(--mood) 14%, var(--card));
+	color: var(--foreground);
+	text-align: left;
+	cursor: pointer;
+	transition:
+		border-color 200ms ease-out,
+		transform 150ms ease-out;
+}
+.mood:hover {
+	border-color: color-mix(in oklab, var(--mood) 50%, transparent);
+}
+.mood:active {
+	transform: scale(0.98);
+}
+.mood:focus-visible {
+	outline: 2px solid var(--ring);
+	outline-offset: 2px;
+}
+.mood-title {
+	max-width: 58%;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	line-height: 1.15;
+	overflow-wrap: anywhere;
+}
+/* Fades in once decoded rather than popping in; a cover that fails is dropped by the page. */
+.mood-art {
+	position: absolute;
+	z-index: -1;
+	object-fit: cover;
+	opacity: 0;
+	transition:
+		opacity 300ms ease-out,
+		transform 400ms ease-out;
+}
+.mood-art.ready {
+	opacity: 1;
+}
+
+/* For you: the cover as a panel on the right, fading left into the card, and the app's mark. */
+.for-you .mood {
+	height: 8.5rem;
+}
+.for-you .mood-title {
+	font-size: 1.25rem;
+}
+.for-you .mood-art {
+	top: 0;
+	right: 0;
+	width: 58%;
+	height: 100%;
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 70%);
+	mask-image: linear-gradient(to right, transparent, #000 70%);
+}
+.for-you .mood:hover .mood-art {
+	transform: scale(1.06);
+}
+.mood-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.875rem;
+	height: 1.875rem;
+	border-radius: 9999px;
+	background: color-mix(in oklab, var(--background) 70%, transparent);
+	box-shadow: 0 0 0 1px color-mix(in oklab, var(--mood) 50%, transparent);
+}
+.mood-logo img {
+	width: 1.125rem;
+	height: 1.125rem;
+}
+
+/* Moods & moments: the cover as a record half off the right edge. The fade lives on the outer
+   ring and the spin on the inner one, or the fade would turn with the record. */
+.moods .mood {
+	height: 7rem;
+}
+.moods .mood-title {
+	font-size: 1.0625rem;
+}
+.mood-disc {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	right: -1.75rem;
+	width: 7.5rem;
+	height: 7.5rem;
+	margin-top: -3.75rem;
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 60%);
+	mask-image: linear-gradient(to right, transparent, #000 60%);
+}
+.mood-spin {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	border-radius: 9999px;
+	background: color-mix(in oklab, var(--mood) 45%, transparent);
+}
+.mood-spin .mood-art {
+	/* Over the frame's placeholder tint: at the shared -1 it would paint behind it. */
+	z-index: 0;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+/* The spindle hole, in the card's own colour. */
+.mood-spin::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1rem;
+	height: 1rem;
+	margin: -0.5rem;
+	border-radius: 9999px;
+	background: color-mix(in oklab, var(--mood) 14%, var(--card));
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--foreground) 12%, transparent);
+}
+.moods .mood:hover .mood-spin {
+	animation: mood-spin 5s linear infinite;
+}
+@keyframes mood-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.mood-pill {
+	width: 1.75rem;
+	height: 0.3125rem;
+	border-radius: 9999px;
+	background: var(--mood);
+}
+
+/* Genres: the cover as a tilted sleeve in the corner that straightens under the pointer, with the
+   genre's colour as light coming from behind it rather than a mark of its own. Below the sleeve
+   (-2 against its -1), above the card's tint. */
+.genres .mood {
+	height: 6.25rem;
+}
+.genres .mood::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background: radial-gradient(
+		55% 95% at 100% 100%,
+		color-mix(in oklab, var(--mood) 50%, transparent),
+		transparent 75%
+	);
+}
+.genres .mood-title {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+	max-width: 62%;
+	font-size: 0.975rem;
+}
+/* Centred on the first line, so a name that wraps hangs under itself, not under the dot. */
+.mood-dot {
+	flex-shrink: 0;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top: 0.32em;
+	border-radius: 9999px;
+	background: var(--mood);
+}
+.mood-sleeve {
+	position: absolute;
+	z-index: -1;
+	right: -0.5rem;
+	bottom: -1.25rem;
+	width: 5.25rem;
+	height: 5.25rem;
+	overflow: hidden;
+	border-radius: calc(var(--radius) + 0.125rem);
+	background: color-mix(in oklab, var(--mood) 45%, transparent);
+	transform: rotate(16deg);
+	transition: transform 250ms ease-out;
+	-webkit-mask-image: linear-gradient(to left, #000 45%, transparent);
+	mask-image: linear-gradient(to left, #000 45%, transparent);
+}
+.mood-sleeve .mood-art {
+	z-index: 0;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+.genres .mood:hover .mood-sleeve {
+	transform: rotate(6deg) translateY(-0.375rem);
+}
+
+/* A track title too wide for the player scrolls itself instead of stopping at an ellipsis.
+   --marquee-dx is one text width plus the gap, measured in Marquee.svelte, which also sets the
+   duration to keep the speed constant. One direction, looping: the second copy lands where the
+   first started, so translating back to 0 is not a visible jump. */
+@keyframes marquee {
+	to { transform: translateX(calc(var(--marquee-dx) * -1)); }
+}
+/* Runs only while hovered (Marquee.svelte), from the start each time; at rest the line is a plain
+   truncated span with no animation, so nothing keeps the compositor busy. */
+.marquee { animation: marquee linear infinite; animation-delay: 0.6s; }
+
+/* A small "pop" for the like button when a track is favourited. */
+@keyframes heart-pop {
+	0% { transform: scale(1); }
+	40% { transform: scale(1.4); }
+	100% { transform: scale(1); }
+}
+.animate-heart-pop { animation: heart-pop 0.3s ease-out; }
+
+/* Range inputs (legacy leaf components: mini player, settings). Spotify bar: 4px track, white fill
+   that turns the accent on hover, 12px white thumb on hover only. The kit's <Slider> is the preferred
+   control for new code. */
+input[type='range'].range {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 12px;
+	background: transparent;
+	cursor: pointer;
+	--fill: #fff;
+}
+input[type='range'].range:hover {
+	--fill: var(--color-accent);
+}
+input[type='range'].range::-webkit-slider-runnable-track {
+	height: 4px;
+	border-radius: 2px;
+	background: linear-gradient(to right, var(--fill) var(--pct, 0%), rgb(255 255 255 / 0.3) var(--pct, 0%));
+}
+input[type='range'].range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	margin-top: -4px;
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 2px 4px rgb(0 0 0 / 0.5);
+	opacity: 0;
+}
+input[type='range'].range:hover::-webkit-slider-thumb,
+input[type='range'].range:focus-visible::-webkit-slider-thumb {
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Menus (kit/menus): #282828, radius 4, padding 4, menu shadow, scrolls past viewport-24. */
+.menu-surface {
+	z-index: 1060;
+	background: var(--color-bg-menu);
+	border-radius: 4px;
+	padding: 4px;
+	box-shadow: var(--shadow-menu);
+	max-height: calc(100vh - 24px);
+	overflow-y: auto;
+	outline: none;
+}
+
+/* stream: tilefix — an image that failed to load is hidden rather than painted as the browser's
+   broken-image glyph; its slot's placeholder background shows instead (lib/imgguard.ts). */
+img[data-img-broken] {
+	visibility: hidden;
+}

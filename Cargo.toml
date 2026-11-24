@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/innertube",
+    "crates/player",
+    "src-tauri",
+]
+
+[workspace.package]
+version = "1.0.4-rc.12"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+[workspace.dependencies]
+notify = "8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = "0.1"
+anyhow = "1"
+thiserror = "2"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+rand = "0.8"
+
+# Release profile: thin LTO + one codegen unit for cross-crate optimization, symbols stripped
+# for size (this binary ships via AppImage self-update — size = every user's download).
+# panic stays "unwind": an abort in the mpv event thread or a tokio task would kill playback
+# for the whole app instead of degrading.
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = "symbols"
+
+# rquickjs-sys ships no bindings for Android. Its aarch64 Linux ones have the same 64-bit layout,
+# so vendor/ adds them under the Android name (no libclang needed in the build).
+[patch.crates-io]
+rquickjs-sys = { path = "vendor/rquickjs-sys" }

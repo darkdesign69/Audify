@@ -1,0 +1,285 @@
+{
+ "playerOverlays": {
+  "playerOverlayRenderer": {
+   "decoratedPlayerBarRenderer": {
+    "decoratedPlayerBarRenderer": {
+     "playerBar": {
+      "multiMarkersPlayerBarRenderer": {
+       "markersMap": [
+        {
+         "key": "DESCRIPTION_CHAPTERS",
+         "value": {
+          "chapters": [
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Introduction"
+             },
+             "timeRangeStartMillis": 0,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_25900.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAdT09F5FlNpaBW6HYBxPiGJSLtLw",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "State of the war in Ukraine"
+             },
+             "timeRangeStartMillis": 60000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_63066.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDqcrFf4DdMd3gp8N8pC53UeftsqQ",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Drone warfare and the kill zone"
+             },
+             "timeRangeStartMillis": 879000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_905800.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAAKKaY5j9FDXwao-ovcLpPonMq-w",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Who is winning the war?"
+             },
+             "timeRangeStartMillis": 3109000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_3138600.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC9U80HN9cMFaMxDVUvt-bKg2fXnA",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Military analysis of Russia's 2022 invasion"
+             },
+             "timeRangeStartMillis": 3806000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_3809233.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAP7EPQJ4ziJNvCkOrStiGl9TIb3A",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Battle of Bakhmut"
+             },
+             "timeRangeStartMillis": 4754000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_4758833.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCWD1y7pefLCrISkn-vChnZQrFTZw",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "War optimism and bad information"
+             },
+             "timeRangeStartMillis": 5696000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_5704833.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAuF7u1KHKCBIBF25tkH1gb9EDKag",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Prigozhin's mutiny"
+             },
+             "timeRangeStartMillis": 6905000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_6911266.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDCWWHHCnq7IdP2Z5U98QDLw8I-oQ",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Putin vs Zelenskyy"
+             },
+             "timeRangeStartMillis": 7760000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_7761633.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLACMZrT8HhLxSBB4WVvtAxgALmGkA",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Trump"
+             },
+             "timeRangeStartMillis": 8838000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_8838100.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDWUrcb_BhHH6JZt8km8KcAvKnfxg",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Paths to peace in Ukraine"
+             },
+             "timeRangeStartMillis": 9373000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_9376933.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDa7uVCzCuOrUZAzpwGbB1keGXfcQ",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           },
+           {
+            "chapterRenderer": {
+             "title": {
+              "simpleText": "Nature of war"
+             },
+             "timeRangeStartMillis": 10013000,
+             "thumbnail": {
+              "thumbnails": [
+               {
+                "url": "https://i.ytimg.com/vi/2hJkprFnzhY/hqdefault_10022933.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBtpy6R9aoLWZnyHAJ5zdaBu-D6bA",
+                "width": 336,
+                "height": 188
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "trackingParams": "CIABEMaHBiITCK7mxdy8i5gDFXNe3QId2lAyZA==",
+          "onChapterRepeat": {
+           "clickTrackingParams": "CIABEMaHBiITCK7mxdy8i5gDFXNe3QId2lAyZMoBBKOthI8=",
+           "openPopupAction": {
+            "popup": {
+             "notificationActionRenderer": {
+              "responseText": {
+               "runs": [
+                {
+                 "text": "Chapter repeat is on"
+                }
+               ]
+              },
+              "actionButton": {
+               "buttonRenderer": {
+                "style": "STYLE_BLUE_TEXT",
+                "text": {
+                 "runs": [
+                  {
+                   "text": "Turn off"
+                  }
+                 ]
+                },
+                "trackingParams": "CIIBEPBbIhMIrubF3LyLmAMVc17dAh3aUDJk",
+                "command": {
+                 "clickTrackingParams": "CIIBEPBbIhMIrubF3LyLmAMVc17dAh3aUDJkygEEo62Ejw==",
+                 "repeatChapterCommand": {
+                  "repeat": "REPEAT_CHAPTER_TYPE_DISABLE_REPEAT"
+                 }
+                }
+               }
+              },
+              "trackingParams": "CIEBELlqIhMIrubF3LyLmAMVc17dAh3aUDJk"
+             }
+            },
+            "popupType": "TOAST"
+           }
+          }
+         }
+        }
+       ]
+      }
+     }
+    }
+   }
+  }
+ },
+ "contents": {
+  "twoColumnWatchNextResults": {
+   "results": {
+    "results": {
+     "contents": [
+      {
+       "videoPrimaryInfoRenderer": {}
+      },
+      {
+       "videoSecondaryInfoRenderer": {
+        "attributedDescription": {
+         "content": "Preston Stewart is a West Point graduate and Afghanistan veteran who covers the Ukraine war extensively on his YouTube channel, his podcast called War and Conflict, and his newsletter called Defense Tech News. Michael Kofman is a world-class military analyst specializing in the Russian and Ukrainian militaries. He is a senior fellow at the Carnegie Endowment and he hosts The Russia Contingency podcast on the War on the Rocks platform.\nThank you for listening ❤ Check out our sponsors: https://lexfridman.com/sponsors/ep504-sb\nSee below for timestamps, transcript, and to give feedback, submit questions, contact Lex, etc.\n\nTranscript:\nhttps://lexfridman.com/preston-stewar...\n\nCONTACT LEX:\nFeedback - give feedback to Lex: https://lexfridman.com/survey\nAMA - submit questions, videos or call-in: https://lexfridman.com/ama\nHiring - join our team: https://lexfridman.com/hiring\nOther - other ways to get in touch: https://lexfridman.com/contact\n\nEPISODE LINKS:\nMichael's X: https://x.com/KofmanMichael\nMichael's Podcast: https://warontherocks.com/premium/the...\nPreston's YouTube:    / @prestonstewart  \nPreston's X: https://x.com/prestonstew_\n\nSPONSORS:\nTo support this podcast, check out our sponsors & get discounts:\nGiveDirectly: Direct donations to people living in extreme poverty.\nGo to https://lexfridman.com/s/givedirectly...\nFin: AI agent for customer service.\nGo to https://lexfridman.com/s/fin-ep504-sb\nLMNT: Zero-sugar electrolyte drink mix.\nGo to https://lexfridman.com/s/lmnt-ep504-sb\nWispr Flow: AI-powered voice dictation app.\nGo to https://lexfridman.com/s/wispr_flow-e...\nShop: Turns any AI agent into your personal shopper.\nGo to https://lexfridman.com/s/shop-ep504-sb\nPerplexity: AI-powered answer engine.\nGo to https://lexfridman.com/s/perplexity-e...\n\nOUTLINE:\n0:00 - Introduction\n1:00 - State of the war in Ukraine\n14:39 - Drone warfare and the kill zone\n51:49 - Who is winning the war?\n1:03:26 - Military analysis of Russia's 2022 invasion\n1:19:14 - Battle of Bakhmut\n1:34:56 - War optimism and bad information\n1:55:05 - Prigozhin's mutiny\n2:09:20 - Putin vs Zelenskyy\n2:27:18 - Trump\n2:36:13 - Paths to peace in Ukraine\n2:46:53 - Nature of war\n\nPODCAST LINKS:\nPodcast Website: https://lexfridman.com/podcast\nApple Podcasts: https://apple.co/2lwqZIr\nSpotify: https://open.spotify.com/episode/7ywc...\nRSS: https://lexfridman.com/feed/podcast/\nPodcast Playlist:    • Lex Fridman Podcast  \nClips Channel:    / lexclips  \n\nSOCIAL LINKS:\nX: https://x.com/lexfridman\nInstagram:   / lexfridman  \nTikTok:   / lexfridman  \nLinkedIn:   / lexfridman  \nFacebook:   / lexfridman  \nPatreon:   / lexfridman  \nTelegram: https://t.me/lexfridman\nReddit:   / lexfridman  "
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "resultCount": 3,
+ "results": [
+  {
+   "closedCaptioning": "none",
+   "collectionId": 1545953110,
+   "collectionName": "Huberman Lab",
+   "artistIds": [],
+   "genres": [
+    {
+     "name": "Health & Fitness",
+     "id": "1512"
+    }
+   ],
+   "feedUrl": "https://feeds.megaphone.fm/hubermanlab",
+   "kind": "podcast-episode",
+   "wrapperType": "podcastEpisode",
+   "description": "In this Huberman Lab Essentials episode, my guest is Dr. Mary Helen Immordino-Yang, EdD, a professor of education and psychology at the University of Southern California (USC) and director of the USC Center for Affective Neuroscience, Development, Learning and Education (CANDLE). We discuss how emotions, stories and culture shape the way we perceive the world, learn and build a sense of self. We a",
+   "country": "USA",
+   "artworkUrl160": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ca/93/7e/ca937e98-0376-83e7-27d8-c8d7a20fd118/mza_9204665044914069566.jpg/160x160bb.jpg",
+   "previewUrl": "https://traffic.megaphone.fm/SCIM7026611161.mp3",
+   "episodeFileExtension": "mp3",
+   "episodeContentType": "audio",
+   "artworkUrl600": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ca/93/7e/ca937e98-0376-83e7-27d8-c8d7a20fd118/mza_9204665044914069566.jpg/600x600bb.jpg",
+   "episodeUrl": "https://traffic.megaphone.fm/SCIM7026611161.mp3",
+   "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ca/93/7e/ca937e98-0376-83e7-27d8-c8d7a20fd118/mza_9204665044914069566.jpg/60x60bb.jpg",
+   "trackTimeMillis": 2315000,
+   "contentAdvisoryRating": "Clean",
+   "collectionViewUrl": "https://itunes.apple.com/us/podcast/huberman-lab/id1545953110?mt=2&uo=4",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/essentials-how-emotions-social-factors-impact-learning/id1545953110?i=1000801403699&uo=4",
+   "releaseDate": "2026-11-12T09:00:00Z",
+   "shortDescription": "In this Huberman Lab Essentials episode, my guest is Dr. Mary Helen Immordino-Yang, EdD, a professor of education and psychology at the University of Southern California (USC) and director of the USC Center for Affective Neuroscience, Development, Learn",
+   "episodeGuid": "68e09d8a-de5d-11f1-a42c-ff5c732501e4",
+   "trackName": "Essentials: How Emotions & Social Factors Impact Learning | Dr. Mary Helen Immordino-Yang",
+   "trackId": 1000801403699
+  },
+  {
+   "closedCaptioning": "none",
+   "collectionId": 1545953110,
+   "collectionName": "Huberman Lab",
+   "artistIds": [],
+   "genres": [
+    {
+     "name": "Health & Fitness",
+     "id": "1512"
+    }
+   ],
+   "feedUrl": "https://feeds.megaphone.fm/hubermanlab",
+   "kind": "podcast-episode",
+   "wrapperType": "podcastEpisode",
+   "description": "Dr. Anna Lembke, MD, is chief of the Addiction Medicine Dual Diagnosis Clinic at Stanford and a leading expert in how to overcome addictions of all kinds. We discuss dopamine dynamics in the brain and how they impact risk-taking, mental obsession, and compulsive behaviors. We also discuss the most common addiction of all\u2014people\u2019s addiction to control\u2014and how prayer and spiritual practices can open",
+   "country": "USA",
+   "artworkUrl160": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9a/d3/19/9ad31912-0b5a-a16e-2d7c-9fd074698b9c/mza_8994222203629500925.jpg/160x160bb.jpg",
+   "previewUrl": "https://traffic.megaphone.fm/SCIM8035808992.mp3",
+   "episodeFileExtension": "mp3",
+   "episodeContentType": "audio",
+   "artworkUrl600": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9a/d3/19/9ad31912-0b5a-a16e-2d7c-9fd074698b9c/mza_8994222203629500925.jpg/600x600bb.jpg",
+   "episodeUrl": "https://traffic.megaphone.fm/SCIM8035808992.mp3",
+   "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9a/d3/19/9ad31912-0b5a-a16e-2d7c-9fd074698b9c/mza_8994222203629500925.jpg/60x60bb.jpg",
+   "trackTimeMillis": 8225000,
+   "contentAdvisoryRating": "Clean",
+   "collectionViewUrl": "https://itunes.apple.com/us/podcast/huberman-lab/id1545953110?mt=2&uo=4",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/overcome-addictions-obsessions-of-all-kinds-dr-anna-lembke/id1545953110?i=1000800773328&uo=4",
+   "releaseDate": "2026-11-09T13:42:00Z",
+   "shortDescription": "Dr. Anna Lembke, MD, is chief of the Addiction Medicine Dual Diagnosis Clinic at Stanford and a leading expert in how to overcome addictions of all kinds. We discuss dopamine dynamics in the brain and how they impact risk-taking, mental obsession, and c",
+   "episodeGuid": "b1e3109e-dc05-11f1-9076-1bdb45fe8fa3",
+   "trackName": "Overcome Addictions & Obsessions of All Kinds | Dr. Anna Lembke",
+   "trackId": 1000800773328
+  },
+  {
+   "closedCaptioning": "none",
+   "collectionId": 1545953110,
+   "collectionName": "Huberman Lab",
+   "artistIds": [],
+   "genres": [
+    {
+     "name": "Health & Fitness",
+     "id": "1512"
+    }
+   ],
+   "feedUrl": "https://feeds.megaphone.fm/hubermanlab",
+   "kind": "podcast-episode",
+   "wrapperType": "podcastEpisode",
+   "description": "In this Huberman Lab Essentials episode, my guest is Dr. Susanna S\u00f8berg, PhD, a metabolic scientist who trained at the University of Copenhagen and an expert in the effects of cold and heat exposure on human health. Dr. S\u00f8berg explains how brief, deliberate cold exposure improves insulin sensitivity, promotes metabolic health and physiological resilience. We also discuss the cold shock response an",
+   "country": "USA",
+   "artworkUrl160": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/c3/6e/94c36e0f-26ad-5d3e-9748-d5778052f035/mza_11749266713497389503.jpg/160x160bb.jpg",
+   "previewUrl": "https://traffic.megaphone.fm/SCIM7784020684.mp3",
+   "episodeFileExtension": "mp3",
+   "episodeContentType": "audio",
+   "artworkUrl600": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/c3/6e/94c36e0f-26ad-5d3e-9748-d5778052f035/mza_11749266713497389503.jpg/600x600bb.jpg",
+   "episodeUrl": "https://traffic.megaphone.fm/SCIM7784020684.mp3",
+   "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/c3/6e/94c36e0f-26ad-5d3e-9748-d5778052f035/mza_11749266713497389503.jpg/60x60bb.jpg",
+   "trackTimeMillis": 2316000,
+   "contentAdvisoryRating": "Clean",
+   "collectionViewUrl": "https://itunes.apple.com/us/podcast/huberman-lab/id1545953110?mt=2&uo=4",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/essentials-cold-heat-exposure-for-metabolic-health/id1545953110?i=1000800010920&uo=4",
+   "releaseDate": "2026-11-05T09:00:00Z",
+   "shortDescription": "In this Huberman Lab Essentials episode, my guest is Dr. Susanna S\u00f8berg, PhD, a metabolic scientist who trained at the University of Copenhagen and an expert in the effects of cold and heat exposure on human health. Dr. S\u00f8berg explains how brief, deli",
+   "episodeGuid": "236a2234-d8be-11f1-b3bf-2713b3b6ac62",
+   "trackName": "Essentials: Cold & Heat Exposure for Metabolic Health | Dr. Susanna S\u00f8berg",
+   "trackId": 1000800010920
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.2.0",
+  "chapters": [
+    { "startTime": 0, "title": "Cold open" },
+    { "startTime": 95.5, "title": "Why chapters", "img": "https://example.com/ch2.jpg", "url": "https://example.com/link" },
+    { "startTime": 42, "title": "Silent marker", "toc": false },
+    { "startTime": 600, "title": "  Listener mail  " },
+    { "startTime": 600, "title": "Duplicate start" },
+    { "startTime": 1800, "title": "Wrap-up", "endTime": 2000 },
+    { "startTime": 99999, "title": "Past the end" }
+  ]
+}

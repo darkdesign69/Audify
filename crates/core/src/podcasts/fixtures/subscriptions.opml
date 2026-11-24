@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head><title>Podcast subscriptions</title></head>
+  <body>
+    <outline text="feeds">
+      <outline type="rss" text="The Fixture Show" title="The Fixture Show" xmlUrl="https://example.com/feed.xml" htmlUrl="https://example.com/show"/>
+      <outline type="rss" text="Second &amp; Show" xmlUrl="https://feeds.example.org/second"/>
+    </outline>
+    <outline type="rss" text="Huberman Lab (YouTube)" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PLPNW_gerXa4Pc8S2qoUQc5e8Ir97RLuVW"/>
+    <outline text="Not a feed"/>
+  </body>
+</opml>

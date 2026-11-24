@@ -1,0 +1,8 @@
+/target
+node_modules
+ui/build
+ui/.svelte-kit
+src-tauri/gen
+.libmpv
+libmpv-link
+out

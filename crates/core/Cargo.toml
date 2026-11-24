@@ -1,0 +1,98 @@
+[package]
+name = "encore-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Encore's Tauri-free core: extraction, queue/radio, SQLite library, lyrics, smart, podcasts, import"
+rust-version = "1.80"
+
+[lib]
+name = "encore_core"
+
+[features]
+default = ["botguard", "romanize-ja"]
+# PoToken minting under deno_core + V8 (rustypipe-botguard). No prebuilt V8 for iOS, and VISIONOS
+# needs no PoToken, so iOS never gets it, whatever the features say (docs/research/23-ios-plan.md §3).
+botguard = ["dep:rustypipe-botguard"]
+# Japanese lyrics romanization. lindera embeds IPADIC (~45 MB in the binary); never on iOS.
+romanize-ja = ["dep:lindera"]
+# The cipher in QuickJS (js/quickjs.rs), the portable in-process engine. iOS uses JavaScriptCore.
+quickjs = ["dep:rquickjs"]
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["net", "io-util", "sync", "rt-multi-thread", "time", "macros"] }
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+futures-util = { workspace = true, features = ["async-await-macro"] }
+rand = { workspace = true }
+rusqlite = { version = "0.32", features = ["bundled"] }
+# Phase 2 extraction stack (cipher + PoToken). context/04, 05, 13.
+base64 = "0.22"
+gethostname = "1.1"
+regex = "1"
+urlencoding = "2"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "brotli", "stream"] }
+# Loopback HTTP servers for the audio and music-video proxies (audioproxy.rs, videoproxy.rs).
+hyper = { version = "1", features = ["server", "http1"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+http-body-util = "0.1"
+innertube = { path = "../innertube" }
+player = { path = "../player" }
+# The stable saved-account key (db.rs::account_key).
+md-5 = "0.10"
+lofty = "0.22.2"
+# Romanized lyrics (#202, romanize.rs); lindera (Japanese) is in the desktop-only block below.
+wana_kana = { version = "5", default-features = false }
+pinyin = { version = "0.11", default-features = false, features = ["with_tone"] }
+any_ascii = { version = "0.3" }
+# Spotify import (#375, spotify.rs + import.rs) and the library export zip.
+zip = { version = "4", default-features = false, features = ["deflate-flate2"] }
+csv = "1"
+strsim = "0.11"
+unicode-normalization = "0.1"
+# Podcasts: RSS/Atom parsing, show-notes sanitising, OPML, dates, Podcast Index auth.
+feed-rs = "2"
+ammonia = "4"
+opml = "1.1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+sha1 = "0.10"
+sha2 = "0.10"
+# Podcast chapters: ID3 CHAP/CTOC frames read from an episode's header (lofty has no CHAP support).
+id3 = { version = "1", default-features = false }
+# Device sync (sync/): end-to-end encryption, the pairing PAKE, key derivation.
+chacha20poly1305 = "0.10"
+spake2 = "0.4"
+hkdf = "0.12"
+# Already in the tree through rustypipe; the iOS bindings note is in crates/innertube/Cargo.toml.
+rquickjs = { version = "0.9", optional = true }
+
+# Desktop-only heavyweights, behind the features above. Target-gated as well, so a plain
+# `cargo build -p encore-core --target aarch64-apple-ios-sim` (default features) leaves them out.
+[target.'cfg(not(target_os = "ios"))'.dependencies]
+# BotGuard runs under deno_core + JSDOM, NOT in a hidden webview. Every token a real browser engine
+# mints is rejected by googlevideo; a minimal-DOM runtime is the only one that produces an accepted
+# one. Measured in `progress/active/webremix-stream-403.md`. This pulls in V8.
+rustypipe-botguard = { version = "0.1.2", optional = true }
+# Held at 0.30: every lindera from 0.35 on needs encoding_rs >= 0.8.35, and rustypipe-botguard's
+# deno_web pins =0.8.33. 0.31 to 0.34 fetch IPADIC from hosts that are gone.
+lindera = { version = "=0.30.0", default-features = false, features = ["ipadic"], optional = true }
+
+# Device sync's LAN discovery (`_spotless-sync._tcp`). Not on iOS: raw multicast there needs an
+# entitlement, so the iPhone browses with Bonjour in Swift and hands the address to the core.
+[target.'cfg(not(target_os = "ios"))'.dependencies.mdns-sd]
+version = "0.13"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+# YouTube sign-in cookies in the Keychain (secrets.rs).
+keyring = { version = "3", features = ["apple-native"] }
+
+[target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]
+# NWPathMonitor's update handler is a block (downloads/net.rs).
+block2 = "0.6"
+
+[dev-dependencies]
+innertube = { path = "../innertube", features = ["test-util"] }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "sync", "time", "test-util"] }

@@ -1,0 +1,367 @@
+{
+ "shows": [
+  {
+   "id": "MPSPPLkL7BvJXiqSQu3i72hSrG4vUkDuaneHuB",
+   "title": "Modern Wisdom",
+   "author": "Chris Williamson",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "feedUrl": "https://feeds.megaphone.fm/modernwisdom",
+   "itunesId": 1347973549,
+   "episodeCount": 1172,
+   "source": "youtube",
+   "followed": false,
+   "ytBrowseId": "MPSPPLkL7BvJXiqSQu3i72hSrG4vUkDuaneHuB"
+  },
+  {
+   "id": "https://media.rss.com/chris-williamson/feed.xml",
+   "title": "Chris Williamson",
+   "author": "Chris Williamson",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3b/57/d5/3b57d5da-b50c-8f55-0479-3a9f403e0cd8/mza_10176512692870936213.png/600x600bb.jpg",
+   "feedUrl": "https://media.rss.com/chris-williamson/feed.xml",
+   "itunesId": 6804908354,
+   "episodeCount": 22,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://feed.podbean.com/ChrisWillx/feed.xml",
+   "title": "Chris Williamson\u2019s Podcast",
+   "author": "Chris Williamson",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/68/a1/6b/68a16b74-93bb-65f6-8aa0-92dc3c0cf94d/mza_1173620183039005398.png/600x600bb.jpg",
+   "feedUrl": "https://feed.podbean.com/ChrisWillx/feed.xml",
+   "itunesId": 6786722944,
+   "episodeCount": 100,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://feed.podbean.com/ChrisWilliamsonOfficial/feed.xml",
+   "title": "The Chris Williamson\u2019s Podcast",
+   "author": "Chris Williamson",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/46/05/07/46050799-382a-c790-5320-eac116e99c16/mza_13446261543565848051.png/600x600bb.jpg",
+   "feedUrl": "https://feed.podbean.com/ChrisWilliamsonOfficial/feed.xml",
+   "itunesId": 6810139079,
+   "episodeCount": 100,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://anchor.fm/s/1e919d6c/podcast/rss",
+   "title": "Mature Student in High Tech Era",
+   "author": "Chris Williamson",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/0c/47/40/0c474081-ad24-39e2-0512-7146b7cb26a9/mza_6765894002120902791.jpg/600x600bb.jpg",
+   "feedUrl": "https://anchor.fm/s/1e919d6c/podcast/rss",
+   "itunesId": 1510865474,
+   "episodeCount": 1,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://api.substack.com/feed/podcast/1518050.rss",
+   "title": "The Renaissance Wisdom Podcast",
+   "author": "Where ancient and modern wisdom meet to form a better way of living.",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/3e/e7/ff/3ee7ff98-4bab-43b8-282d-d0f8aa0eeb88/mza_17386553866326705346.jpg/600x600bb.jpg",
+   "feedUrl": "https://api.substack.com/feed/podcast/1518050.rss",
+   "itunesId": 1679854392,
+   "episodeCount": 31,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://media.rss.com/modern-wisdom-with-dawn-ricci/feed.xml",
+   "title": "Modern Wisdom with Dawn Ricci",
+   "author": "Dawn Ricci",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f7/dd/c2/f7ddc2cd-c408-0c56-58e4-04ae84132a76/mza_2149437962064793622.png/600x600bb.jpg",
+   "feedUrl": "https://media.rss.com/modern-wisdom-with-dawn-ricci/feed.xml",
+   "itunesId": 1824972436,
+   "episodeCount": 20,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://media.rss.com/modern-wisdom-with-dawn-ricci/feed.xml",
+   "title": "Modern Wisdom with Dawn Ricci",
+   "author": "Dawn Ricci",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/eb/ba/6a/ebba6a3e-10bc-45ce-e393-d6aa3127a5fb/mza_6615201259213021043.png/600x600bb.jpg",
+   "feedUrl": "https://media.rss.com/modern-wisdom-with-dawn-ricci/feed.xml",
+   "itunesId": 1820619193,
+   "episodeCount": 20,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://anchor.fm/s/be9a434/podcast/rss",
+   "title": "Buddhist Wisdom, Modern Life",
+   "author": "Claire Villarreal, PhD",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/ec/d4/c1/ecd4c1fc-03cf-d2a4-618f-7c5af63fe007/mza_3342203311644417002.jpg/600x600bb.jpg",
+   "feedUrl": "https://anchor.fm/s/be9a434/podcast/rss",
+   "itunesId": 1531179284,
+   "episodeCount": 127,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://media.rss.com/modernvillagewisdompodcast/feed.xml",
+   "title": "Modern Village Wisdom Podcast",
+   "author": "Modern Village Wisdom",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8b/b1/93/8bb193a8-4878-a147-7fe2-b13a492aad55/mza_8457051350101174465.png/600x600bb.jpg",
+   "feedUrl": "https://media.rss.com/modernvillagewisdompodcast/feed.xml",
+   "itunesId": 6793191602,
+   "episodeCount": 15,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://anchor.fm/s/102e17708/podcast/rss",
+   "title": "Caves of Wisdom- Inside the Lion's Den: Exploring Ancient Mystery & Modern Mysticism",
+   "author": "Caves of Wisdom",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2f/dd/1d/2fdd1dda-1986-f1e4-d0dd-c70abd81aec3/mza_17019758416358157721.jpg/600x600bb.jpg",
+   "feedUrl": "https://anchor.fm/s/102e17708/podcast/rss",
+   "itunesId": 1881684430,
+   "episodeCount": 3,
+   "source": "rss",
+   "followed": false
+  },
+  {
+   "id": "https://media.rss.com/modern-manhood-ancient-wisdom-purpose-philosophy-the-soul-s-journey-for-men/feed.xml",
+   "title": "Being a Man: Modern Manhood, Ancient Wisdom & Purpose, The soul's journey for men",
+   "author": "Maurizio Rosini, MyMasterMan",
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/bf/a5/e5/bfa5e529-c95e-8486-4d3d-7980539db445/mza_4144367247768225364.png/600x600bb.jpg",
+   "feedUrl": "https://media.rss.com/modern-manhood-ancient-wisdom-purpose-philosophy-the-soul-s-journey-for-men/feed.xml",
+   "itunesId": 6791895246,
+   "episodeCount": 29,
+   "source": "rss",
+   "followed": false
+  }
+ ],
+ "episodes": [
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB3090549411.mp3?updated=1738976617",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "The Best Moments Of Modern Wisdom (2024) - #882",
+   "publishedAt": null,
+   "durationSecs": 7581,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB3090549411.mp3?updated=1738976617",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB3068097490.mp3?updated=1741719262",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "14 Lessons from 5 Years Of Modern Wisdom - #589",
+   "publishedAt": null,
+   "durationSecs": 4080,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/52/35/21/5235217a-5cf6-9cf1-49c9-2e8b4cd8b211/mza_11790626568812151738.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB3068097490.mp3?updated=1741719262",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB9783393710.mp3?updated=1740396840",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Modern Wisdom Christmas Special - Reflecting On The Wildest Year - #723",
+   "publishedAt": null,
+   "durationSecs": 7518,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB9783393710.mp3?updated=1740396840",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB6074473269.mp3?updated=1766398286",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "The Best Moments of Modern Wisdom (2025) - #1036",
+   "publishedAt": null,
+   "durationSecs": 11712,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB6074473269.mp3?updated=1766398286",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB2934504647.mp3?updated=1741817921",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "This Is The Price Of Greatness - Chris Bumstead - #652",
+   "publishedAt": null,
+   "durationSecs": 7325,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB2934504647.mp3?updated=1741817921",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5241064330.mp3?updated=1776093905",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "12 Raw Truths About Gaining Power & Respect - Robert Greene - #839",
+   "publishedAt": null,
+   "durationSecs": 7564,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5241064330.mp3?updated=1776093905",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB8652501983.mp3?updated=1761520477",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Is Being Smart Worth the Depression? - Alex O\u2019Connor & Joe Folley - #1012",
+   "publishedAt": null,
+   "durationSecs": 7136,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB8652501983.mp3?updated=1761520477",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5126641076.mp3?updated=1744240600",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Is Spirituality Compatible With Modern Life? - Rob Bell - #245",
+   "publishedAt": null,
+   "durationSecs": 3227,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/d1/2a/ad/d12aad5f-b343-400e-49b0-a5c44145c64c/mza_11674916943879117088.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5126641076.mp3?updated=1744240600",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5806903874.mp3?updated=1738978985",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Life Lessons From A Modern Cowboy - Dry Creek Dewayne - #869",
+   "publishedAt": null,
+   "durationSecs": 6906,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7f/73/99/7f739968-f65e-f679-d1fd-c727118c69f0/mza_17156407142775783271.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5806903874.mp3?updated=1738978985",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB8171104015.mp3?updated=1741976344",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Finding Heroic Meaning In Modern Life - Tom Van Der Linden - #473",
+   "publishedAt": null,
+   "durationSecs": 4597,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/05/87/e3/0587e341-7c77-888b-81e1-30ce9e8ad5fb/mza_17379000055288975150.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB8171104015.mp3?updated=1741976344",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5986755375.mp3?updated=1741889176",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "Understanding The Wisdom Of Psychopaths - Dr Kevin Dutton - #552",
+   "publishedAt": null,
+   "durationSecs": 4362,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/52/10/b7/5210b7b9-0213-1f40-6802-e5c5dee939f6/mza_9251281548694984481.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5986755375.mp3?updated=1741889176",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  },
+  {
+   "id": "PODURL:https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5854508279.mp3?updated=1741976087",
+   "showId": "https://feeds.megaphone.fm/modernwisdom",
+   "showTitle": "Modern Wisdom",
+   "title": "The Wisdom Of Intuition - Iain McGilchrist - #455",
+   "publishedAt": null,
+   "durationSecs": 3726,
+   "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/63/0a/b0/630ab0b5-2f4e-3d60-48fe-0f377e88890e/mza_13694539763104562225.jpg/600x600bb.jpg",
+   "enclosureUrl": "https://prfx.byspotify.com/e/pscrb.fm/rss/p/claritaspod.com/measure/traffic.megaphone.fm/SIXMSB5854508279.mp3?updated=1741976087",
+   "isVideo": false,
+   "progress": {
+    "positionSecs": 0,
+    "durationSecs": 0,
+    "fraction": 0,
+    "played": false,
+    "updatedAt": 0
+   },
+   "saved": false
+  }
+ ]
+}

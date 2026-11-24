@@ -1,0 +1,66 @@
+{
+  "WEB_REMIX": {
+    "clientName": "WEB_REMIX",
+    "clientVersion": "1.20260213.01.00",
+    "clientId": "67",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0",
+    "loginSupported": true,
+    "useSignatureTimestamp": true,
+    "useWebPoTokens": true
+  },
+  "WEB": {
+    "clientName": "WEB",
+    "clientVersion": "2.20261101.01.00",
+    "clientId": "1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0"
+  },
+  "WEB_CREATOR": {
+    "clientName": "WEB_CREATOR",
+    "clientVersion": "1.20220726.00.00",
+    "clientId": "62",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0",
+    "loginSupported": true,
+    "loginRequired": true,
+    "useSignatureTimestamp": true,
+    "useWebPoTokens": true
+  },
+  "TVHTML5": {
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20260707.07.00",
+    "clientId": "7",
+    "userAgent": "Mozilla/5.0 (ChromiumStylePlatform) Cobalt/25.lts.30.1034943-gold (unlike Gecko), Unknown_TV_Unknown_0/Unknown (Unknown, Unknown)",
+    "loginSupported": true,
+    "useSignatureTimestamp": true
+  },
+  "VISIONOS": {
+    "clientName": "VISIONOS",
+    "clientVersion": "0.1",
+    "clientId": "101",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
+    "osName": "visionOS",
+    "osVersion": "1.3.21O771",
+    "deviceMake": "Apple",
+    "deviceModel": "RealityDevice14,1",
+    "friendlyName": "visionOS"
+  },
+  "IOS_MUSIC": {
+    "clientName": "IOS_MUSIC",
+    "clientVersion": "7.01.05",
+    "clientId": "26",
+    "userAgent": "com.google.ios.youtubemusic/7.01.05 (iPhone16,2; U; CPU iOS 18_2 like Mac OS X;)",
+    "osName": "iOS",
+    "osVersion": "18.2.22C152",
+    "deviceMake": "Apple",
+    "deviceModel": "iPhone16,2",
+    "friendlyName": "iOS Music"
+  },
+  "TVHTML5_SIMPLY": {
+    "clientName": "TVHTML5_SIMPLY",
+    "clientVersion": "1.0",
+    "clientId": "75",
+    "userAgent": "Mozilla/5.0 (ChromiumStylePlatform) Cobalt/25.lts.30.1034943-gold (unlike Gecko), Unknown_TV_Unknown_0/Unknown (Unknown, Unknown)",
+    "friendlyName": "TVHTML5 Simply",
+    "useSignatureTimestamp": true,
+    "useWebPoTokens": true
+  }
+}
